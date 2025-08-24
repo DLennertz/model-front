@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import CardInfo from "../Cards/cardInfo";
+import CardInfo from "../Cards/Cardinfo/CardInfo";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./AniversariantesCarousel.css";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "../Menu/Menu";
-import "./header.css";
+import "./Header.css";
 
 const Header = () => (
   <header className="app-header">
