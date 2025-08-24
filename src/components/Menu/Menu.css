@@ -1,0 +1,47 @@
+.app-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app-menu__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-menu__item {
+    position: relative;
+  }
+  
+  .app-menu__link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .app-menu__link:hover {
+    color: #ffd369;
+  }
+  
+  /* underline animado */
+  .app-menu__link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #ffd369;
+    transition: width 0.3s ease;
+  }
+  
+  .app-menu__link:hover::after {
+    width: 100%;
+  }
+  

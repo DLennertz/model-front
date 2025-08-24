@@ -1,0 +1,12 @@
+.infoRow {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+
+.infoRow::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
