@@ -12,8 +12,8 @@ const Menu = () => (
       </li>
 
       <li className="app-menu__item">
-        <Link className="app-menu__link" to="/Modelo/1">
-          Modelos
+        <Link className="app-menu__link" to="/Model/1">
+          Models
         </Link>
       </li>
 

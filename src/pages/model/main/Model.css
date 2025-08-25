@@ -1,0 +1,13 @@
+
+.campo {
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    margin-left: 200px;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  
