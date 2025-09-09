@@ -1,0 +1,50 @@
+:root{
+    --header-h: 60px;
+    --sidebar-w: 220px;
+  }
+  
+  html, body, #root { height: 100%; margin: 0; }
+  
+  .page-root { min-height: 100vh; background: #f6f7f9; }
+  
+  /* Área abaixo do header, lado a lado */
+  #container{
+    display: flex;
+    height: calc(100vh - var(--header-h));
+    margin-top: var(--header-h); /* se o Header for sticky/fixed */
+    overflow: hidden;
+  }
+  
+  /* Submenu colado na lateral e começando abaixo do header */
+  .submenu-area{
+    flex: 0 0 var(--sidebar-w);
+    height: calc(100vh - var(--header-h));
+    position: sticky;
+    top: var(--header-h);
+    align-self: flex-start;
+    overflow-y: auto;
+  }
+  
+  /* Conteúdo centralizado e fluido */
+  .campo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centraliza */
+    padding: 24px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  
+  .campo > h2{
+    margin: 0 0 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Form dentro do conteúdo com largura eleganta */
+  .campo .Form{
+    width: min(100%, 700px);
+  }
+  

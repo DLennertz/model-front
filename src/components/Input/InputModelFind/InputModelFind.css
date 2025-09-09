@@ -1,0 +1,97 @@
+/* overlay do modal */
+.Modal_Overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+  }
+  
+  /* conteúdo do modal */
+  .Modal_Form{
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    width: min(900px, 92vw);
+    max-height: 90vh;
+    overflow: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  
+  .caixa{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px 12px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .Form_Btn{ justify-self: start; }
+  #campoId{ padding: 0; }
+  
+  /* grid interno do modal: 3 colunas no desktop */
+  .caixaModal{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 12px;
+  }
+  
+  /* colunas */
+  .ModalColumn{ background: #fff; }
+  
+  /* foto */
+  #foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #fotoModal{
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .fotoPlaceholder{
+    width: 100%;
+    max-width: 380px;
+    height: 220px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: #999;
+  }
+  
+  /* medidas/info */
+  #medidas p, #info p{ margin: 6px 0; }
+  
+  /* botão fechar alinhado à direita da coluna info */
+  #buttonModalFechar{
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #1f1f1f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #buttonModalFechar:hover{ filter: brightness(1.05); }
+  
+  /* responsivo */
+  @media (max-width: 900px){
+    .caixaModal{
+      grid-template-columns: 1fr; /* empilha */
+    }
+    #foto{ order: 0; }
+    #medidas{ order: 1; }
+    #info{ order: 2; }
+    #buttonModalFechar{ justify-self: start; }
+  }
+  
+  /* campos do form (herda seu tema dark se quiser) */
+  .Form_Field{
+    text-align: center;
+  }
+  
