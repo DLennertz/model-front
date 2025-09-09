@@ -1,0 +1,22 @@
+.table-container {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 0.5rem;
+  }
+  
+  .detail-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 6px;
+  }
+  
+  .detail-item {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  

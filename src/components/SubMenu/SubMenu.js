@@ -10,10 +10,10 @@ const SubMenu = () => {
   return (
     <div className="sidebar">
       <Link
-        className={isActive("/modelo/listar") ? "active" : ""}
-        to="/modelo/listar"
+        className={isActive("/model/list") ? "active" : ""}
+        to="/model/list"
       >
-        <span className={isActive("/modelo/listar") ? "text-active" : ""}>
+        <span className={isActive("/model/list") ? "text-active" : ""}>
           <i className="fas fa-arrow-right"></i>Listar
         </span>
       </Link>

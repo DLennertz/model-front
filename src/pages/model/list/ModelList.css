@@ -1,0 +1,25 @@
+:root {
+    --sidebar-w: 220px;
+    --header-h: 60px;
+  }
+  
+  #container {
+    display: flex;
+    height: calc(100vh - var(--header-h));
+    margin-top: var(--header-h);
+  }
+  
+  .campo {
+    display: grid;
+    flex: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background: #f6f7f9;
+  }
+  
+  .campo h2 {
+    margin: 0 0 1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
