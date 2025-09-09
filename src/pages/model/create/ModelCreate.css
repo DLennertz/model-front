@@ -1,0 +1,59 @@
+:root {
+    --header-h: 60px;      /* altura do Header */
+    --sidebar-w: 220px;    /* largura do SubMenu */
+  }
+  
+  /* Garante altura total da viewport e zera margens */
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-root {
+    min-height: 100vh;
+    background: #f6f7f9;
+  }
+  
+  /* Container ocupa todo o espaço abaixo do header */
+  #container {
+    display: flex;
+    height: calc(100vh - var(--header-h));
+    margin-top: var(--header-h); /* se o Header for sticky/fixed */
+    overflow: hidden;            /* evita scroll duplo */
+  }
+  
+  /* Submenu colado à esquerda e começando abaixo do header */
+  .submenu-area {
+    flex: 0 0 var(--sidebar-w);
+    height: calc(100vh - var(--header-h));
+    position: sticky;
+    top: var(--header-h);
+    align-self: flex-start; /* sticky funciona dentro do flex */
+    background: linear-gradient(180deg, #1f1f1f, #2c2c2c);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    overflow-y: auto;
+  }
+  
+  /* Área de conteúdo centralizada e fluida */
+  .campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centraliza horizontalmente o conteúdo */
+    padding: 24px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  
+  .campo > h2 {
+    margin: 0 0 16px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Limita largura do formulário para ficar elegante em telas grandes */
+  .campo .Form {
+    width: 100%;
+    max-width: 900px; /* ajuste a gosto */
+  }
+  

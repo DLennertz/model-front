@@ -1,0 +1,164 @@
+/* ------- ESCOPO E DIMENSÃO GERAL ------- */
+.campo .Form {
+    background: #1f1f1f;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    width: min(100%, 1000px);              /* respeita o container */
+    margin: 2rem auto;
+    /* alternativa mais “elástica”:
+       width: clamp(320px, 100%, 1000px); */
+  }
+  
+  .Form h2 {
+    color: #ffd369;
+    font-size: 1.8rem;
+    margin: 0 0 1.25rem;
+    font-weight: 600;
+  }
+  
+  .Form_div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Form_Group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Form_Label {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-bottom: 0.35rem;
+  }
+  
+  /* ------- CAMPOS ------- */
+  .Form_Field {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .Form_Field:focus {
+    outline: none;
+    border-color: #ffd369;
+    box-shadow: 0 0 0 3px rgba(255, 211, 105, 0.25);
+  }
+  
+  .Form_Field::placeholder {
+    color: #aaa;
+  }
+  
+  /* selects mais bonitos */
+  .Form_Field[type="date"],
+  .Form_Field::-webkit-calendar-picker-indicator {
+    filter: invert(1) opacity(0.8);
+  }
+  
+  .Form select.Form_Field {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #ffd369 50%),
+                      linear-gradient(135deg, #ffd369 50%, transparent 50%),
+                      linear-gradient(to right, #ffd369, #ffd369);
+    background-position: calc(100% - 18px) calc(50% - 2px),
+                         calc(100% - 12px) calc(50% - 2px),
+                         calc(100% - 2.2rem) 50%;
+    background-size: 6px 6px, 6px 6px, 1px 65%;
+    background-repeat: no-repeat;
+    padding-right: 2.6rem;
+  }
+  
+  /* erros */
+  .Form_Error {
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    margin-top: 0.25rem;
+  }
+  
+  /* botão */
+  .Form_Btn {
+    background: linear-gradient(90deg, #ffd369, #ffbe55);
+    border: none;
+    color: #1f1f1f;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.2s ease;
+  }
+  .Form_Btn:hover {
+    filter: brightness(0.97);
+    transform: translateY(-2px);
+  }
+  
+  /* upload (caso use) */
+  #campoFoto input[type="file"] {
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #2c2c2c;
+    border: 1px dashed #666;
+    color: #ccc;
+    cursor: pointer;
+  }
+  #campoFoto input[type="file"]:hover {
+    border-color: #ffd369;
+    color: #ffd369;
+  }
+  
+  /* ------- MEDIDAS EM UMA LINHA (GRID) ------- */
+  #medidas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr)); /* 4 colunas no desktop */
+    gap: 1rem;
+  }
+  
+  #medidas .Form_Group {
+    min-width: 0; /* deixa o grid controlar a largura, sem esticar demais */
+  }
+  
+  /* responsivo: 3 colunas >= 992px, 2 colunas >= 768px, 1 coluna abaixo */
+  @media (max-width: 991px) {
+    #medidas { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+  }
+  @media (max-width: 768px) {
+    .campo .Form { padding: 1rem; }
+    #medidas { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+  }
+  @media (max-width: 480px) {
+    #medidas { grid-template-columns: 1fr; }
+  }
+  
+  /* ------- MELHORIAS DE USO ------- */
+  /* remove setas de inputs numéricos (se usar type=number) */
+  input[type="number"].Form_Field::-webkit-outer-spin-button,
+  input[type="number"].Form_Field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"].Form_Field { -moz-appearance: textfield; }
+  
+  /* autofill do Chrome em tema escuro */
+  input.Form_Field:-webkit-autofill,
+  select.Form_Field:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c2c2c inset !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+  
+  /* rolagem escura mais discreta (opcional) */
+  .campo::-webkit-scrollbar { height: 10px; width: 10px; }
+  .campo::-webkit-scrollbar-thumb {
+    background: #3a3a3a; border-radius: 8px;
+  }
+  .campo::-webkit-scrollbar-track { background: #232323; }
+  

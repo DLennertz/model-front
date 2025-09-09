@@ -16,7 +16,7 @@ const ModelCard = (props) => {
         {props.props.photos.length === 0 ? (
           <img
             src="https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-6.png"
-            alt="Template Image"
+            alt="s Image"
           />
         ) : (
           <img

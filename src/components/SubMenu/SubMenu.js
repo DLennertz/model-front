@@ -28,8 +28,8 @@ const SubMenu = () => {
       </Link>
 
       <Link
-        className={isActive("/modelo/cadastro") ? "active" : ""}
-        to="/modelo/cadastro"
+        className={isActive("/model/cadastro") ? "active" : ""}
+        to="/model/cadastro"
       >
         <span className={isActive("/modelo/cadastro") ? "text-active" : ""}>
           <i className="fas fa-arrow-right"></i>Cadastrar
