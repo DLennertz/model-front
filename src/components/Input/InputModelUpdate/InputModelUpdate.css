@@ -1,0 +1,123 @@
+/* Container do formulário */
+.Form {
+    background: #1f1f1f;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    max-width: 900px;
+    margin: 2rem auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Título */
+  .Form p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffd369;
+    margin-bottom: 1rem;
+  }
+  
+  /* Grupos de campos */
+  .Form_div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  /* Cada campo */
+  .Form_Group {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label */
+  .Form_Label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  /* Inputs, selects e textarea */
+  .Form_Field {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .Form_Field:focus {
+    outline: none;
+    border-color: #ffd369;
+    box-shadow: 0 0 0 3px rgba(255, 211, 105, 0.3);
+  }
+  
+  .Form_Field::placeholder {
+    color: #aaa;
+  }
+  
+  /* Erros de validação */
+  .Form_Error {
+    font-size: 0.85rem;
+    color: #ff6b6b;
+    margin-top: 0.25rem;
+  }
+  
+  /* Botão */
+  .Form_Btn {
+    background: linear-gradient(90deg, #ffd369, #ffbe55);
+    border: none;
+    color: #1f1f1f;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+  
+  .Form_Btn:hover {
+    background: linear-gradient(90deg, #ffbe55, #ffd369);
+    transform: translateY(-2px);
+  }
+  
+  .Form_Btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Seções específicas */
+  #medidas,
+  #aparencia,
+  #filhos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  #medidas .Form_Group,
+  #aparencia .Form_Group,
+  #filhos .Form_Group {
+    flex: 1;
+    min-width: 150px;
+    max-width: 220px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .Form {
+      padding: 1rem;
+    }
+  
+    .Form_div {
+      flex-direction: column;
+    }
+  }
+  

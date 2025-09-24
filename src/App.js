@@ -7,6 +7,7 @@ const Model = lazy(() => import("./pages/model/main/Model"));
 const ModelCreate = lazy(() => import("./pages/model/create/ModelCreate"));
 const ModelFind = lazy(() => import("./pages/model/find/ModelFind"));
 const ModelList = lazy(() => import("./pages/model/list/ModelList"));
+const ModelUpdate = lazy(() => import("./pages/model/update/ModelUpdate"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -14,6 +15,7 @@ const routes = [
   { path: "/model/cadastro", element: <ModelCreate /> },
   { path: "/model/find", element: <ModelFind /> },
   { path: "/model/list", element: <ModelList /> },
+  { path: "/model/update", element: <ModelUpdate /> },
 ];
 
 function App() {
