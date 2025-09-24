@@ -1,0 +1,49 @@
+:root {
+    --header-h: 60px;   /* ajuste se seu header tiver outra altura */
+    --sidebar-w: 220px; /* largura do SubMenu */
+  }
+  
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .page-root {
+    min-height: 100vh;
+    background: #f6f7f9;
+  }
+  
+  /* Área principal abaixo do header */
+  #container {
+    display: flex;
+    height: calc(100vh - var(--header-h));
+    margin-top: var(--header-h); /* se o Header é sticky/fixed */
+    overflow: hidden;
+  }
+  
+  /* Submenu colado na esquerda */
+  .submenu-area {
+    flex: 0 0 var(--sidebar-w);
+    height: 100%;
+    overflow-y: auto;
+    background: #111315; /* opcional: combina com seu SubMenu */
+    border-right: 1px solid rgba(0,0,0,0.08);
+  }
+  
+  /* Conteúdo ocupa o restante e rola verticalmente */
+  .campo {
+    flex: 1 1 auto;
+    min-width: 0;             /* importante para não “apertar” conteúdo */
+    height: 100%;
+    overflow-y: auto;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #f6f7f9;
+  }
+  
+  .campo > h2 {
+    margin: 0 0 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  

@@ -8,6 +8,7 @@ const ModelCreate = lazy(() => import("./pages/model/create/ModelCreate"));
 const ModelFind = lazy(() => import("./pages/model/find/ModelFind"));
 const ModelList = lazy(() => import("./pages/model/list/ModelList"));
 const ModelUpdate = lazy(() => import("./pages/model/update/ModelUpdate"));
+const ModelDelete = lazy(() => import("./pages/model/delete/ModelDelete"));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -16,6 +17,7 @@ const routes = [
   { path: "/model/find", element: <ModelFind /> },
   { path: "/model/list", element: <ModelList /> },
   { path: "/model/update", element: <ModelUpdate /> },
+  { path: "/model/delete", element: <ModelDelete /> },
 ];
 
 function App() {

@@ -46,10 +46,10 @@ const SubMenu = () => {
       </Link>
 
       <Link
-        className={isActive("/modelo/deletar") ? "active" : ""}
-        to="/modelo/deletar"
+        className={isActive("/model/delete") ? "active" : ""}
+        to="/model/delete"
       >
-        <span className={isActive("/modelo/deletar") ? "text-active" : ""}>
+        <span className={isActive("/model/delete") ? "text-active" : ""}>
           <i className="fas fa-arrow-right"></i>Deletar
         </span>
       </Link>
